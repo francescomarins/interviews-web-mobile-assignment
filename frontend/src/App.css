@@ -7,6 +7,29 @@ body {
   margin: 5% 1%;
   background: #f5fffe;
   font-family: "Raleway", sans-serif;
+  font-size: 16px;
+}
+
+summary {
+  font-weight: bold;
+  padding: 1%;
+  margin: 1% 0;
+  border-radius: 10px;
+  width: 50%;
+}
+
+.create-summary {
+  background: #d8f0ef;
+}
+
+.update-summary {
+  background: #ccffcc;
+}
+
+summary:hover {
+  transition: 0.5s;
+  transform: scale(1.01) perspective(1px);
+  cursor: pointer;
 }
 
 .post {
@@ -19,9 +42,10 @@ body {
   padding: 10px;
 }
 
-.post .post-header {
+.post-header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 5px;
 }
 
 .post .user {
@@ -31,4 +55,73 @@ body {
   border-style: solid;
   border-width: 1px;
   border-color: #4bb8cf;
+}
+
+.post-ops *{
+  margin: 0% 0.1em;
+}
+
+.delete-button {
+  font-size: 16px;
+  color: white;
+  padding: 2px;
+  border-radius: 7px;
+  background: #f53d3d;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #d94747;
+}
+
+.delete-button:hover {
+  background: #f90505;
+}
+
+input {
+  font-size: 16px;
+}
+
+input[type='submit'] {
+  color: white;
+  padding: 2px;
+  border-radius: 7px;
+  background: #3ebf31;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #339c28;
+}
+
+input[type='submit']:hover {
+  background: #339c28;
+}
+
+.post-form * {
+  min-width: 25%;
+  padding: 0.5em;
+  margin: 0.5em 0;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 0.5px;
+  border-color: grey;
+}
+
+.post-form textarea {
+  font-size: 16px;
+  min-width: 50%;
+  resize: none;
+}
+
+@media screen and (max-width: 900px) {
+  summary {
+    width:98%;
+    padding: 4px;
+  }
+
+  .post-form input[type='text'] {
+      width:95%;
+  }
+
+  .post-form textarea {
+      width:95%;
+  }
+
 }

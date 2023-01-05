@@ -17,26 +17,19 @@ class App extends React.Component {
   }
 
   fetchData() {
-    let toload;
     let url = 'https://jsonplaceholder.typicode.com/posts';
-    url = url + '?id=' + Number(this.state.loaded+1);
-    for(toload = this.state.loaded+2; toload<=this.state.loaded+15; toload++) {
-      url = url + '&id=' + toload;
-    }
-    console.log(url);
-    fetch(url)
-    .then(resp => resp.json())
-    .then(resp => {
+    url = url + '?id_gte=' + Number(this.state.loaded+1) + '&id_lte=' + Number(this.state.loaded+15);
+    fetch(url).then(resp => resp.json()).then(resp => {
       if(resp.length < 15)
         document.getElementById('load-more').style.display = 'none';
-      if(resp.length) {
-      let updatingArray = this.state.posts.concat(resp);
-      this.setState({posts: updatingArray, loaded: this.state.loaded+resp.length})
+      if(resp.length && this.state.posts.indexOf(resp[0].id)===-1) {
+        let updatingArray = this.state.posts.concat(resp);
+        this.setState({posts: updatingArray, loaded: this.state.loaded+resp.length})
     }});
-    console.log("Fetch concluded");
+    console.log("Fetch from " + url + " concluded");
   }
 
-  //   // the list of posts will be filled after the component is mounted
+  // /* the list of posts will be filled after the component is mounted */
   //   componentDidMount() {
   //     this.fetchData();
   // }
@@ -115,13 +108,10 @@ class App extends React.Component {
 
 
   render() {
-    if(this.state.loaded === 0)
-      this.fetchData();
 
     return (
       <div className="body" onScroll={this.fetchData}>
       <h1>Welcome to the Beautiful Collection of Posts</h1>
-
       <details>
       <summary className='create-summary'>Add a new post</summary>
       <CreatePost/>
@@ -142,7 +132,7 @@ class App extends React.Component {
       {this.state.posts.map((item) => (
         <Post key={item.id} post={item} delete={this.removePostFromState}/>
       ))}
-      <input type='button'id='load-more' value='Load more' onClick={this.fetchData}/>
+      <input type='button'id='load-more' value='Load Posts' onClick={this.fetchData}/>
       </div>
     );
   }

@@ -29,11 +29,11 @@ details summary::-webkit-details-marker {
 }
 
 summary {
+  text-align: center;
   font-weight: bold;
   padding: 1%;
   margin: 1% 0;
   border-radius: 10px;
-  width: 50%;
 }
 
 .create-summary {
@@ -54,6 +54,7 @@ summary:hover {
   margin: 1% 0%;
   border-radius: 10px;
   background-image: linear-gradient(180deg, #d8f0ef, #afe0e9);
+  cursor: pointer;
 }
 
 .post-content {
@@ -92,6 +93,17 @@ summary:hover {
 
 .delete-button:hover {
   background: #f90505;
+}
+
+.comment {
+  border-radius: 10px;
+  border-style:ridge;
+  border-color: #4bb8cf;
+  margin-top: 0.7%;
+}
+
+.comment * {
+  padding: 2px;
 }
 
 input {

@@ -10,6 +10,24 @@ body {
   font-size: 16px;
 }
 
+details {
+  transition: all 0.6s ease-in-out;
+  max-height: 50px;
+}
+
+details[open] {
+  overflow: hidden;
+  max-height: 500px;
+}
+
+details > summary {
+  list-style: none;
+}
+
+details summary::-webkit-details-marker {
+  display:none;
+}
+
 summary {
   font-weight: bold;
   padding: 1%;
@@ -94,6 +112,23 @@ input[type='submit']:hover {
   background: #339c28;
 }
 
+input#load-more {
+  position: absolute;
+  width: 10%;
+  right: 45%;
+  color: white;
+  padding: 5px;
+  border-radius: 7px;
+  background: Grey;
+  border-style: solid;
+  border-width: 1px;
+  border-color: Grey;
+}
+
+input#load-more:hover {
+  background: DimGrey;
+}
+
 .post-form * {
   min-width: 25%;
   padding: 0.5em;
@@ -111,6 +146,10 @@ input[type='submit']:hover {
 }
 
 @media screen and (max-width: 900px) {
+  body {
+    margin: 1% 1% 15% 1%;
+  }
+
   summary {
     width:98%;
     padding: 4px;
@@ -124,4 +163,9 @@ input[type='submit']:hover {
       width:95%;
   }
 
+  input#load-more {
+    position: absolute;
+    width: 30%;
+    right: 35%;
+  }
 }

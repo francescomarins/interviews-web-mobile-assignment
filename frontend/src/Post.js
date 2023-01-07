@@ -13,7 +13,7 @@ class Post extends React.Component {
   }
 
   loadComments() {
-    fetch('https://jsonplaceholder.typicode.com/posts/' + this.props.post.id + '/comments')
+    fetch('http://localhost:5000/posts/' + this.props.post.id + '/comments')
     .then(resp => resp.json())
     .then(resp => {
       this.setState({comments: resp})

@@ -1,4 +1,6 @@
 import React from 'react';
+// var url = 'https://jsonplaceholder.typicode.com/posts';
+var url = 'http://localhost:5000/posts'
 
 class CreatePost extends React.Component {
   constructor(props) {
@@ -17,7 +19,7 @@ class CreatePost extends React.Component {
       return;
     }
 
-    fetch('https://jsonplaceholder.typicode.com/posts', {
+    fetch(url, {
       method: 'POST',
       body: JSON.stringify({
         title: event.target.title.value ,
@@ -28,10 +30,12 @@ class CreatePost extends React.Component {
         'Content-type': 'application/json; charset=UTF-8',
       },
     })
-    .then((response) => response.json())
-    .then((json) => console.log(json));
-    alert("Post published");
+    .then((response) => response.json()).catch(function(err) {
+      console.log('Creation error -> ' + err);
+      return;
+    });
     document.getElementById("create-post-form").reset();
+    document.getElementById('load-more').style.display = 'block';
   }
 
   render() {

@@ -1,6 +1,5 @@
 import React from 'react';
-// var url = 'https://jsonplaceholder.typicode.com/posts';
-var url = 'http://localhost:5000/posts'
+const url = 'http://localhost:5000/posts'
 
 class CreatePost extends React.Component {
   constructor(props) {

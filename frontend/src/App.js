@@ -3,6 +3,9 @@ import Post from './Post.js';
 import CreatePost from './CreatePost.js';
 import React from 'react';
 
+const bundle_size = 15;
+const url = "http://localhost:5000/posts";
+
 class App extends React.Component {
   constructor(){
     super();
@@ -17,10 +20,10 @@ class App extends React.Component {
   }
 
   fetchData() {
-    let url = "http://localhost:5000/posts";
-    url = url + '?id_gte=' + Number(this.state.loaded+1) + '&id_lte=' + Number(this.state.loaded+15);
-    fetch(url).then(resp => resp.json()).then(resp => {
-      if(resp.length < 15)
+    let url_get = url + '?id_gte=' + Number(this.state.loaded+1) + '&id_lte=' + Number(this.state.loaded+bundle_size);
+    fetch(url_get).then(resp => resp.json()).then(resp => {
+      console.log(resp);
+      if(resp.length < bundle_size)
       document.getElementById('load-more').style.display = 'none';
       if(resp.length && this.state.posts.indexOf(resp[0].id)===-1) {
         let updatingArray = this.state.posts.concat(resp);
@@ -31,7 +34,7 @@ class App extends React.Component {
     }
 
     removePostFromState(id) {
-      fetch('http://localhost:5000/posts/'+id, {
+      fetch(url+'/'+id, {
         method: 'DELETE',
       }).catch(function(err) {
         console.log('Removal error -> ' + err);
@@ -59,10 +62,7 @@ class App extends React.Component {
         return;
       }
 
-      console.log(this.state.posts);
-      console.log(id);
       let index = this.state.posts.findIndex(item => item.id === Number(id));
-      console.log(index);
       if(index === -1) {
         alert("The post you want to update is not present");
         return;
@@ -81,7 +81,7 @@ class App extends React.Component {
       }
 
       //Request to server
-      fetch('http://localhost:5000/posts/'+id, {
+      fetch(url+'/'+id, {
         method: 'PUT',
         body: JSON.stringify({
           id: id,

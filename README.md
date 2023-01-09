@@ -1,7 +1,7 @@
 <!---
 Hi! We're happy you opened this file, not everyone does!
-To let us know you did, paste a capybara picture 
-in the How to Run section 😊 
+To let us know you did, paste a capybara picture
+in the How to Run section 😊
 -->
 
 # Web & Mobile Interview Assignment
@@ -13,9 +13,9 @@ This is the interview exercise for the Web & Mobile team of [xtream](https://www
 :watch: We estimate it should take around 8 hours to solve the challenges, and we give you **1 week** to submit a solution, so that you can do it at your own pace.    
 
 ### Deliverables
-Simply fork this repository and work on it as if you were working on a real-world project assigned to you. A week from now, we will checkout your work and evaluate it. 
+Simply fork this repository and work on it as if you were working on a real-world project assigned to you. A week from now, we will checkout your work and evaluate it.
 
-:heavy_exclamation_mark:**Important**: At the end of this README, you will find a "How to run" section that is not written out. Please, write there instructions on how to run your code. 
+:heavy_exclamation_mark:**Important**: At the end of this README, you will find a "How to run" section that is not written out. Please, write there instructions on how to run your code.
 
 ### Evaluation
 Your work will be assessed according to several criteria. As an example, these include:
@@ -26,7 +26,7 @@ Your work will be assessed according to several criteria. As an example, these i
 * Provided Documentation
 
 ### Let's get started
-We designed **three sections**: 
+We designed **three sections**:
 1. Frontend
 2. Backend
 3. Mobile
@@ -39,12 +39,12 @@ Of course, it'd be great if you could complete all sections! However, we do unde
 
 
 ## Problem Domain
-[JSONPlaceholder](https://jsonplaceholder.typicode.com/) is a website that provides you with REST API endpoints for testing and developing your applications. We will be working with the */posts* resource provided by JSONPlaceholder. 
+[JSONPlaceholder](https://jsonplaceholder.typicode.com/) is a website that provides you with REST API endpoints for testing and developing your applications. We will be working with the */posts* resource provided by JSONPlaceholder.
 
 
 ---   
 
-### Section 1) Frontend 
+### Section 1) Frontend
 
 :heavy_exclamation_mark: The requirements below are technologically agnostic, and you can choose to work with what you feel more comfortable with. For example, you may choose [React](https://it.reactjs.org/), [Angular](https://angular.io/) or plain JavaScript as well.
 
@@ -63,7 +63,7 @@ Support mobile portrait layout
 #### Challenge #1.5
 Use the /comments resources provided by JSONPlaceholder to render the comments of a post below it on click with some kind of animation
 
---- 
+---
 ### Section 2) Backend
 
 ##### Introduction
@@ -77,12 +77,12 @@ Implement your own backed using a language and libraries of your choice. The onl
 #### Challenge #2.2
 The requirements for this challenge are the exact same requirements of the previous challenge (#2.1), but we ask you to fullfil these requirements using the [Firebase](https://firebase.google.com/) services provided by Google.
 
---- 
+---
 ### Section 3) Mobile
 
 #### Challenge #3
 The requirements for this challenge are the exact same requirements of the Frontend challenges, but we ask you to fullfil these requirements through a mobile application. For example, you may choose [React Native](https://reactnative.dev/), [Flutter](https://flutter.dev/) or any other technology you feel comfortable developing mobile apps with.
 
---- 
+---
 # How to run
 ...

@@ -9,8 +9,8 @@ app.use(express.json());
 
 var con = mysql.createConnection({
   host: "localhost",
-  user: "root",
-  password: "Cloud_08",
+  user: "assignment_user",
+  password: "assignment",
   database: "posts_db",
   socketPath: "/tmp/mysql.sock"
 });

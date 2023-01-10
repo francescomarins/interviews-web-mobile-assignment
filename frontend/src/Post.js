@@ -64,8 +64,8 @@ class Post extends React.Component {
       <div id={"post-"+id} className="post">
       <form id={"update-post-"+id+"-form"} className="edit-form post-form" onSubmit={this.sendEdit}>
       <input className="cancel-button" type="button" value="Cancel" onClick={this.cancelEdit}/><br/>
-      Please, leave as they are (empty) those fields that you want to keep unchanged.<br/>
-      <label>ID: <input type="text" id="id" name="id" placeholder={id} disabled/></label><br/>
+      Please, leave those fields that you want to keep unchanged as they are (empty).<br/><br/>
+      You're updating post {id}<br/>
       <label>UserId: <input type="text" id="userId" name="userId" placeholder={user}/></label><br/>
       <label>Title: <input type="text" id="title" name="title" placeholder={title}/></label><br/>
       <textarea id="body" name="body" placeholder={body}/><br/>

@@ -40,9 +40,9 @@ summary {
   background: #d8f0ef;
 }
 
-.update-summary {
+/* .update-summary {
   background: #ccffcc;
-}
+} */
 
 summary:hover {
   transition: 0.5s;
@@ -54,7 +54,10 @@ summary:hover {
   margin: 1% 0%;
   border-radius: 10px;
   background-image: linear-gradient(180deg, #d8f0ef, #afe0e9);
-  cursor: pointer;
+}
+
+.edit-form {
+  display: none;
 }
 
 .post-content {
@@ -81,7 +84,6 @@ summary:hover {
 }
 
 .delete-button {
-  font-size: 16px;
   color: white;
   padding: 2px;
   border-radius: 7px;
@@ -89,6 +91,7 @@ summary:hover {
   border-style: solid;
   border-width: 1px;
   border-color: #d94747;
+  cursor: pointer;
 }
 
 .delete-button:hover {
@@ -110,7 +113,8 @@ input {
   font-size: 16px;
 }
 
-input[type='submit'] {
+input[type='submit'], .edit-button{
+  min-width: 20%;
   color: white;
   padding: 2px;
   border-radius: 7px;
@@ -118,10 +122,36 @@ input[type='submit'] {
   border-style: solid;
   border-width: 1px;
   border-color: #339c28;
+  cursor: pointer;
 }
 
-input[type='submit']:hover {
+input[type='submit']:hover, .edit-button:hover {
   background: #339c28;
+}
+
+.cancel-button {
+    color: white;
+    background: #527a7a;
+    position: absolute;
+    right: 2%;
+    max-width: 20%;
+}
+
+.load-comments {
+  color: white;
+  padding: 2px;
+  border-radius: 7px;
+  border-style: solid;
+  border-width: 1px;
+  background: #9999ff;
+  border-color: #9999ff;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.load-comments:hover {
+  background: #4d4dff;
+  border-color: #4d4dff;
 }
 
 input#load-more {
@@ -141,8 +171,11 @@ input#load-more:hover {
   background: DimGrey;
 }
 
+form {
+  padding: 5px;
+}
+
 .post-form * {
-  min-width: 25%;
   padding: 0.5em;
   margin: 0.5em 0;
   border-radius: 10px;
@@ -153,7 +186,8 @@ input#load-more:hover {
 
 .post-form textarea {
   font-size: 16px;
-  min-width: 50%;
+  min-width: 75%;
+  min-height: 5em;
   resize: none;
 }
 
@@ -180,4 +214,9 @@ input#load-more:hover {
     width: 30%;
     right: 35%;
   }
+
+  .cancel-button {
+      position: absolute;
+      right: 4%;
+    }
 }

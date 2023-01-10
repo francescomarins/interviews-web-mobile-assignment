@@ -85,4 +85,51 @@ The requirements for this challenge are the exact same requirements of the Front
 
 ---
 # How to run
-...
+
+##Frontend
+Requirement: node.js
+
+To visualize the frontend it is necessary to enter the frontend directory with:
+```
+cd frontend
+```
+Then execute
+```
+npm start
+```
+From your browser visit http://localhost:3000
+
+##Backend based on MySQL database
+###Setting up the database
+Execute the following command before testing the application.
+
+```
+sudo apt update
+sudo apt install mysql-server
+sudo systemctl start mysql.service
+
+mysql -u "root" -p 'your-my-sql-password' < db.sql
+```
+Substitute 'your-my-sql-password' with your actual password.
+As an alternative to the last command it is also possible to run
+```
+sudo mysql -u "root" < db.sql
+```
+
+This command will access the mysql shell as root to execute the script db.sql
+The script contains the creation of a user to access data using the server, the creation of the database and the insertion of some entries.
+
+In server.js check to have the right path set for the operating system you are using:
+MacOs:
+socketPath: "/tmp/mysql.sock"
+
+Ubuntu:
+socketPath: "/var/run/mysqld/mysqld.sock"
+
+###Running the backend:
+```
+npm start
+```
+##Backend based on Firebase database
+Place the file webassignment-d6aa0-firebase-adminsdk-e4g6p-973ea3f06b.json inside the backend-firebase
+npm start

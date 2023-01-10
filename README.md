@@ -86,7 +86,7 @@ The requirements for this challenge are the exact same requirements of the Front
 ---
 # How to run
 
-##Frontend
+## Frontend
 Requirement: node.js
 
 To visualize the frontend it is necessary to enter the frontend directory with:
@@ -99,8 +99,8 @@ npm start
 ```
 From your browser visit http://localhost:3000
 
-##Backend based on MySQL database
-###Setting up the database
+## Backend based on MySQL database
+### Setting up the database
 Execute the following command before testing the application.
 
 ```
@@ -126,10 +126,10 @@ socketPath: "/tmp/mysql.sock"
 Ubuntu:
 socketPath: "/var/run/mysqld/mysqld.sock"
 
-###Running the backend:
+### Running the backend:
 ```
 npm start
 ```
-##Backend based on Firebase database
+## Backend based on Firebase database
 Place the file webassignment-d6aa0-firebase-adminsdk-e4g6p-973ea3f06b.json inside the backend-firebase
 npm start

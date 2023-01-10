@@ -119,7 +119,7 @@ sudo mysql -u "root" < db.sql
 This command will access the mysql shell as root to execute the script db.sql
 The script contains the creation of a user to access data using the server, the creation of the database and the insertion of some entries.
 
-In server.js check to have the right path set for the operating system you are using:
+**In server.js check to have the right path set for the operating system you are using:**
 MacOs:
 socketPath: "/tmp/mysql.sock"
 
@@ -132,4 +132,5 @@ npm start
 ```
 ## Backend based on Firebase database
 Place the file webassignment-d6aa0-firebase-adminsdk-e4g6p-973ea3f06b.json inside the backend-firebase
+```
 npm start

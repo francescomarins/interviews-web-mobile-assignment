@@ -709,8 +709,8 @@ app.post("/posts", (req, res) => {
   let body = req.body.body;
 
   postsRef.child(id).set({
-    'id' : id,
-    'userId' : userId,
+    'id' : Number(id),
+    'userId' : Number(userId),
     'title' : title,
     'body' : body
   });
@@ -725,8 +725,8 @@ app.put("/posts/*", (req, res) => {
   let body = req.body.body;
 
   postsRef.child(id-1).set({
-    'id' : id,
-    'userId' : userId,
+    'id' : Number(id),
+    'userId' : Number(userId),
     'title' : title,
     'body' : body
   });

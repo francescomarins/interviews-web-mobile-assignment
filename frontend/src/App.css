@@ -40,10 +40,6 @@ summary {
   background: #d8f0ef;
 }
 
-/* .update-summary {
-  background: #ccffcc;
-} */
-
 summary:hover {
   transition: 0.5s;
   transform: scale(1.01) perspective(1px);

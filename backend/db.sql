@@ -32,6 +32,9 @@ VALUES ('1','2','title2','body2');
 INSERT INTO posts (userId, id, title, body)
 VALUES ('2','3','title3','body3');
 
+INSERT INTO posts (userId, id, title, body)
+VALUES ('4','4','title4','body4');
+
 INSERT INTO comments (postId, id, name, email, body)
 VALUES ('1','1','n1','email1@e.e', 'c1');
 

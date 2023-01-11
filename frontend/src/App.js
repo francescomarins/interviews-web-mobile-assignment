@@ -84,7 +84,7 @@ class App extends React.Component {
     render() {
 
       return (
-        <div className="body" onScroll={this.fetchData}>
+        <div className="body">
         <h1>Welcome to the Beautiful Collection of Posts</h1>
         <details>
         <summary className='create-summary'>Add a new post</summary>

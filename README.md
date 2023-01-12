@@ -124,11 +124,14 @@ sudo mysql -u "root" < db.sql
 This command will access the mysql shell as root to execute the script db.sql
 The script contains the creation of a user to access data using the server, the creation of the database and the insertion of some entries.
 
-**In server.js check to have the right path set for the operating system you are using:**
-MacOs:
-socketPath: "/tmp/mysql.sock"
+```
+cd backend
+```
 
-Ubuntu:
+**In server.js check to have the right path set for the operating system you are using:**
+* MacOs:
+socketPath: "/tmp/mysql.sock"
+* Ubuntu:
 socketPath: "/var/run/mysqld/mysqld.sock"
 
 ### Running the backend:
@@ -146,9 +149,15 @@ In any directory you are, execute the following command:
 ```
 npx create-expo-app mobilefrontend
 ```
-This will create a directory containing all necessary dependencies, replace the ***App.js*** file with the one having the same name that you can find in frontend-mobile/ of this repository, then add ***Post.js*** and ***CreateForm.js*** in the mobilefrontend directory. Having done that, place yourself in mobilefrontend and run the script as shown by commands below:
+This will create a directory containing all necessary dependencies, replace the ***App.js*** file with the one having the same name that you can find in frontend-mobile/ of this repository, then add ***Post.js*** and ***CreatePost.js*** in the mobilefrontend directory. 
+In all three files set the ip of the device where the backend is running replacing the 192.168.1.11 in the line:
+
+*var url = "http://192.168.1.11:5000/posts";*
+
+
+Having done that, place yourself in mobilefrontend and run the script as shown by commands below:
 ```
 cd mobilefrontend
 npm start
 ```
-Then scan the QR Code generated on the command prompt using Expo Go app on the device you prefer and you wiil be able to visualize the frontend.
+Then scan the QR Code generated on the command prompt using Expo Go app on the device you prefer and you wiil be able to visualize the frontend. **It is important that both devices are on the same network**

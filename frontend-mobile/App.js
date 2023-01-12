@@ -90,7 +90,7 @@ class App extends React.Component {
     let loadPostsButton = this.state.loadPostsButton ?
     (<Pressable onPress={this.fetchData} style={styles.button}><Text style={styles.whiteText}>LOAD POSTS</Text></Pressable>) : null;
     return (
-      <ScrollView style={styles.container} className="body">
+      <ScrollView style={styles.container}>
       <Text style={styles.titleText}> Welcome to the Beautiful Collection of Posts</Text>
       <CreatePost changeLoadPostsVisibility={this.changeLoadPostsVisibility}/>
       <Text style={styles.secondTitleText}>List of posts</Text>

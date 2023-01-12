@@ -6,7 +6,7 @@ app.use(cors());
 app.use(express.json());
 
 const fb = require("firebase-admin");
-var serviceAccount = require("./webassignment-d6aa0-firebase-adminsdk-e4g6p-973ea3f06b.json");
+var serviceAccount = require("./webassignment-d6aa0-079ae0e88912.json");
 
 fb.initializeApp({
   credential: fb.credential.cert(serviceAccount),

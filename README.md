@@ -131,7 +131,7 @@ socketPath: "/var/run/mysqld/mysqld.sock"
 npm start
 ```
 ## 2.2 - Backend based on Firebase database
-Place the file webassignment-d6aa0-firebase-adminsdk-e4g6p-973ea3f06b.json inside the backend-firebase
+Place the file webassignment-d6aa0-079ae0e88912.json inside the backend-firebase
 ```
 npm start
 ```

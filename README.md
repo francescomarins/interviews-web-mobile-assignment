@@ -86,7 +86,7 @@ The requirements for this challenge are the exact same requirements of the Front
 ---
 # How to run
 
-## Frontend
+## 1 - Frontend
 Requirement: node.js
 
 To visualize the frontend it is necessary to enter the frontend directory with:
@@ -99,7 +99,7 @@ npm start
 ```
 From your browser visit http://localhost:3000
 
-## Backend based on MySQL database
+## 2.1 - Backend based on MySQL database
 ### Setting up the database
 Execute the following command before testing the application.
 
@@ -130,7 +130,20 @@ socketPath: "/var/run/mysqld/mysqld.sock"
 ```
 npm start
 ```
-## Backend based on Firebase database
+## 2.2 - Backend based on Firebase database
 Place the file webassignment-d6aa0-firebase-adminsdk-e4g6p-973ea3f06b.json inside the backend-firebase
 ```
 npm start
+```
+
+## 3 - Mobile frontend
+In any directory you are, execute the following command:
+```
+npx create-expo-app mobilefrontend
+```
+This will create a directory containing all necessary dependencies, replace the ***App.js*** file with the one having the same name that you can find in frontend-mobile/ of this repository, then add ***Post.js*** and ***CreateForm.js*** in the mobilefrontend directory. Having done that, place yourself in mobilefrontend and run the script as shown by commands below:
+```
+cd mobilefrontend
+npm start
+```
+Then scan the QR Code generated on the command prompt using Expo Go app on the device you prefer and you wiil be able to visualize the frontend.

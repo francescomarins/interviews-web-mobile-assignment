@@ -85,6 +85,11 @@ The requirements for this challenge are the exact same requirements of the Front
 
 ---
 # How to run
+First of all, clone this repository and enter it.
+```
+git clone https://github.com/francescomarins/interviews-web-mobile-assignment.git
+cd interviews-web-mobile-assignment
+
 
 ## 1 - Frontend
 Requirement: node.js

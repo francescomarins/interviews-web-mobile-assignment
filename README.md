@@ -89,7 +89,7 @@ First of all, clone this repository and enter it.
 ```
 git clone https://github.com/francescomarins/interviews-web-mobile-assignment.git
 cd interviews-web-mobile-assignment
-
+```
 
 ## 1 - Frontend
 Requirement: node.js
